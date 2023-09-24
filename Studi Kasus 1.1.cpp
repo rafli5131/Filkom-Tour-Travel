@@ -2,10 +2,8 @@
 using namespace std;
 
 int main() {
-    string Nama, alamat, noTelp, kategori, laki , perempuan , kelamin;
-    int tahun;
-    laki = "LAKI -LAKI";
-    perempuan = "PEREMPUAN";
+    string Nama, alamat, noTelp, kategori , kelamin;
+    int gaji , umur;
 
     cout << "======FILKOM TOUR & TRAVEL========" << endl;
     cout << endl;
@@ -17,24 +15,23 @@ int main() {
     cin >> noTelp;
     cout << "Jenis Kelamin (L/P) :";
     cin >> kelamin;
+    cout << "Umur :";
+    cin >> umur;
     cout << "Kategori Karyawan :";
     cin >> kategori;
+    cout << "Gaji :";
+    cin >> gaji;
     cout << endl;
-    kelamin = kelamin="L"? laki :perempuan ;
+    kelamin = kelamin="L"? "LAKI -LAKI" :  "PEREMPUAN" ;
     cout << "==========  FILKOM TOUR & TRAVEL ==========" << endl;
     cout << "============= DATA KARYAWAN =============" << endl;
-    cout << endl;
-    cout << "Nama :";
-    cout << Nama << endl;
-    cout << "Alamat :";
-    cout << alamat << endl;
-    cout << "No Telepon :";
-    cout << noTelp << endl;
-    cout << "Jenis Kelamin (L/P) :";
-    cout << kelamin<< endl;
-    cout << "Kategori Karyawan :";
-    cout << kategori << endl;
-    cout << endl;
+    cout << "Nama : " << Nama << endl;;
+    cout << "Alamat : "<< alamat << endl;
+    cout << "No Telepon : "<< noTelp << endl;
+    cout << "Jenis Kelamin : "<< kelamin<< endl;
+    cout << "Umur : "<< umur<< endl;
+    cout << "Kategori Karyawan : "<< kategori << endl;
+    cout << "Gaji : Rp"<< gaji << endl;
     cout << "==================================" << endl;
     return 0;
 }

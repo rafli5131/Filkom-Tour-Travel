@@ -21,15 +21,11 @@ int main() {
     cout << "========== FILKOM TOUR & TRAVEL ==========" << endl;
     cout << "============= DATA MOBIL =============" << endl;
     cout << endl;
-    cout << "Noplat : ";
-    cout << noplat << endl;
-    cout << "Merek : ";
-    cout << merek << endl;
-    cout << "Type : ";
-    cout << type << endl;
-    cout << "Warna Mobil : ";
-    cout << warna << endl;
-    cout << "Tahun Keluaran : ";
-    cout << tahun << endl;
+    cout << "Noplat : "<< noplat << endl;
+    cout << "Merek : "<< merek << endl;
+    cout << "Type : "<< type << endl;
+    cout << "Warna Mobil : "<< warna << endl;
+    cout << "Tahun Keluaran : "<< tahun << endl;
+    cout << "==================================" << endl;
     return 0;
 }
