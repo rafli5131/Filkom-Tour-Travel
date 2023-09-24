@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 //tes
+//tes1
 int main() {
     string Nama, alamat, noTelp, kategori , kelamin;
     int gaji , umur;
