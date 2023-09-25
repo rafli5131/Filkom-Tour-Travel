@@ -11,7 +11,7 @@ int main() {
     getline (cin,noplat);
     cout << "Merek :";
     cin >> merek;
-    cout << "Type :";
+    cout << "Tipe :";
     cin >> type;
     cout << "Warna :";
     cin >> warna;
@@ -23,7 +23,7 @@ int main() {
     cout << endl;
     cout << "Noplat : "<< noplat << endl;
     cout << "Merek : "<< merek << endl;
-    cout << "Type : "<< type << endl;
+    cout << "Tipe : "<< type << endl;
     cout << "Warna Mobil : "<< warna << endl;
     cout << "Tahun Keluaran : "<< tahun << endl;
     cout << "==================================" << endl;
