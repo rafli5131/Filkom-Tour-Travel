@@ -4,9 +4,9 @@ using namespace std;
 int main() {
     string noplat, merek, type, warna;
     int tahun; 
-	float modifikasi;
+    float modifikasi;
    
-	cout << "====== FILKOM TOUR & TRAVEL ========" << endl;
+    cout << "====== FILKOM TOUR & TRAVEL ========" << endl;
     cout << "Nomor Plat : ";
     getline (cin, noplat);
     cout << "Merek : ";
@@ -22,7 +22,7 @@ int main() {
     cout << "          " << endl;
     
     cout << "====== FILKOM TOUR & TRAVEL ========" << endl;
-	cout << "============ DATA MOBIL ============" << endl;
+    cout << "============ DATA MOBIL ============" << endl;
     cout << "Nomor Plat : " << noplat << endl;
     cout << "Merek : " << merek << endl;
     cout << "Tipe : " << type << endl;
