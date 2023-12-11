@@ -1,0 +1,199 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Fungsi untuk menghitung gaji bersih
+int hitungGajiBersih(string kategori, int gajiPokok, double jamLembur) {
+    float uangLemburPerJam, pajak;
+
+    if (kategori == "Supir travel") {
+        uangLemburPerJam = 50000;
+        pajak = 0.05;
+    } else if (kategori == "Supir rentcar") {
+        uangLemburPerJam = 45000;
+        pajak = 0.06;
+    } else { // Admin
+        uangLemburPerJam = 40000;
+        pajak = 0.07;
+    }
+
+    int gajiKotor = gajiPokok + (uangLemburPerJam * jamLembur);
+    int gajiBersih = gajiKotor - (gajiKotor * pajak);
+
+    return gajiBersih;
+}
+
+// Fungsi untuk menghitung jumlah tagihan
+int hitungTagihan(float jam, int tarif, int tambahan) {
+    int totalTagihan;
+
+    if (jam <= 5) {
+        totalTagihan = 400000 + (jam * tambahan);
+    } else {
+        totalTagihan = 500000 + (jam * tambahan);
+    }
+
+    return totalTagihan;
+}
+
+int main() {
+    // Kode untuk situasi 1
+    string nama[20], alamat[20], jenis_kelamin[20], kategori_karyawan[20];
+    int no_telp[20];
+    string noPlat[20], merkMobil[20], warnaMobil[20];
+    int tahunKeluaranMobil[20];
+    char tipeMobil[20];
+	
+	for (int i = 0; i < 101; i++){
+	cout << "============= WELCOME TO FILKOMART =============" << endl;
+	cout << "============= INPUT DATA KARYAWAN FILKOMART =============" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << "Data Karyawan ke-" << i+1 << endl;
+        cout << "Nama : ";
+        cin.ignore (); 
+        getline (cin, nama[i]);
+        cout << "Alamat : ";
+        cin.ignore (); 
+        getline (cin, alamat[i]); 
+        cout << "Nomor Telepon : "; 
+        cin >> no_telp[i];
+        cout << "Jenis Kelamin : ";
+        cin >> jenis_kelamin[i];
+        cout << "Kategori Karyawan : ";
+        cin.ignore ();
+        getline (cin, kategori_karyawan[i]);
+        cout << " " << endl;
+    }
+    cout << " " << endl;
+    cout << "============= OUTPUT DATA KARYAWAN FILKOMART =============" << endl;
+    for (int i = 0; i < 3; ++i) {
+        cout << "Data Karyawan ke-" << i+1 << endl;
+        cout << "Nama : " << nama[i] << endl;
+        cout << "Alamat : " << alamat[i] << endl;
+        cout << "Nomor Telepon : " << no_telp[i] << endl;
+        cout << "Jenis Kelamin : " << jenis_kelamin[i] << endl;
+        cout << "Kategori Karyawan : " << kategori_karyawan[i] << endl;
+        cout << " " << endl;
+    }
+    cout << " " << endl;
+    
+    // Kode untuk situasi 2
+    const int jumlahKaryawan = 3;
+    int gajiPokok[jumlahKaryawan];
+    double jamLembur[jumlahKaryawan];
+    string kategori[jumlahKaryawan];
+    
+    cout << "============= INPUT DATA GAJI KARYAWAN FILKOMART =============" << endl;
+    for (int i = 0; i < jumlahKaryawan; i++){
+    cout << "Gaji pokok ke-" << i+1 << " : ";
+    cin >> gajiPokok[i];
+    cout << "Jam lembur ke-" << i+1 << " : ";
+    cin >> jamLembur[i];
+    cout << "Kategori Karyawan ke-" << i+1 << " : ";
+    cin.ignore (); 
+    getline (cin, kategori[i]);
+    cout << " " << endl;
+    }
+    
+    cout << "============= OUTPUT DATA GAJI KARYAWAN FILKOMART =============" << endl;
+    for (int i = 0; i < jumlahKaryawan; ++i){
+    int gajiBersih = hitungGajiBersih(kategori[i], gajiPokok[i], jamLembur[i]);
+    cout << "Gaji bersih karyawan ke- "<< i+1 << " adalah : Rp. " << gajiBersih << endl;
+    }
+    
+    // Kode untuk situasi 3
+    cout << " " << endl;
+    cout << "============= INPUT DATA MOBIL FILKOMART =============" << endl;
+    for (int i = 0; i < 1; i++) {
+        cout << "Data mobil ke-" << i+1 << endl;
+        cout << "Nomor Plat : ";
+        cin.ignore ();
+        getline (cin, noPlat[i]); 
+        cout << "Merek Mobil : ";
+        cin.ignore ();
+        getline (cin, merkMobil[i]); 
+        cout << "Warna Mobil : ";
+        cin >> warnaMobil[i];
+        cout << "Tahun Keluaran : ";
+        cin >> tahunKeluaranMobil[i];
+        cout << "Tipe Mobil : ";
+        cin >> tipeMobil[i];
+        cout << " " << endl;
+    }
+    cout << " " << endl;
+    cout << "============= OUTPUT DATA MOBIL FILKOMART =============" << endl;
+    for (int i = 0; i < 1; ++i) {
+        cout << "Data mobil ke-" << i+1 << endl;
+        cout << "Nomor Plat : " << noPlat[i] << endl;
+        cout << "Merek Mobil : " << merkMobil[i] << endl;
+        cout << "Warna Mobil : " << warnaMobil[i] << endl;
+        cout << "Tahun Keluaran : " << tahunKeluaranMobil[i] << endl;
+        cout << "Tipe Mobil : " << tipeMobil[i] << endl;
+        cout << " " << endl;
+    }
+    
+    // Kode untuk situasi 4
+    float jam;
+    int tarif, tambahan, totalTagihan;
+    string travel;
+	
+	cout << " " << endl;
+	cout << "============= INPUT DATA JUMLAH TAGIHAN =============" << endl;
+	for (int i = 0; i < 1; i++){
+	cout << "Tujuan Travel : ";
+	cin.ignore ();
+	getline (cin, travel); 
+    cout << "Lama sewa (jam) : ";
+    cin >> jam;
+    if (travel=="Surabaya-Malang"){
+    	if (jam<=5){
+    		totalTagihan = 400000 + 100000 + 100000;
+		}
+		else {
+			totalTagihan = 500000 + 150000 + 100000;
+		}
+	}
+	else if (travel=="Madura-Malang"){
+		if (jam<=5){
+    		totalTagihan = 400000 + 100000 + 200000;
+		}
+		else {
+			totalTagihan = 500000 + 150000 + 200000;
+		}
+	}
+	else if (travel=="Banyuwangi-Malang"){
+		if (jam<=5){
+    		totalTagihan = 400000 + 100000 + 250000;
+		}
+		else {
+			totalTagihan = 500000 + 150000 + 250000;
+		}
+	}
+	else if (travel=="Situbondo-Malang"){
+		if (jam<=5){
+    		totalTagihan = 400000 + 100000 + 175000;
+		}
+		else {
+			totalTagihan = 500000 + 150000 + 175000;
+		}
+	}
+	else if (travel=="Tulungagung-Malang"){
+		if (jam<=5){
+    		totalTagihan = 400000 + 100000 + 125000;
+		}
+		else {
+			totalTagihan = 500000 + 150000 + 125000;
+		}
+	}
+	}
+	
+	cout << " " << endl;
+	cout << "============= OUTPUT JUMLAH TAGIHAN =============" << endl;
+	cout << "Jumlah tagihan Anda : " << totalTagihan << endl;
+	cout << " " << endl;
+	cout << "============= TERIMA KASIH TELAH MEMESAN TRAVEL KAMI =============" << endl;
+	cout << " " << endl;
+	}
+	
+    return 0;
+}
