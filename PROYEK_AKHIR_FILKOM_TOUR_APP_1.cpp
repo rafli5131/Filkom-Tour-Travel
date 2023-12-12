@@ -34,8 +34,8 @@ double gaji(int kategori , int lembur){
 
 int main(){
     int jumlah = 0 , pilih , gol , lembur;
-    char jenis_kelamin[1000] ;
-    string nama[100],alamat[100],agama[100], role [100];
+    char jenis_kelamin[100] ;
+    string nama[100],alamat[100],agama[100], role [100] , tlp [100];
     int umur[100] ;
     menu:
     cout << " =====================================================" << endl;
@@ -57,7 +57,7 @@ int main(){
         cin.ignore();
         for (int i = 0; i < jumlah; i++)
         {
-            cout << " ================Karyawan ["<< (i+1) <<"]================" << endl;
+            cout << " ====================Karyawan ["<< (i+1) <<"]====================" << endl;
             cout << "Nama :";
             getline(cin,nama[i]);
             cout << "Jenis Kelamin (l/p) : "; 
@@ -69,6 +69,8 @@ int main(){
             cin.ignore();
             cout << "Alamat : ";
             getline(cin,alamat[i]);
+            cout << "No Telepon : " ;
+            getline(cin,tlp[i]);
             cout << "Kategori Karyawan : " ;
             getline(cin,role[i]);
             cout << " =====================================================" << endl; 
@@ -76,21 +78,22 @@ int main(){
         goto menu;
         break;
     case 2:
-        cout << "================DATA KARYAWAN================" << endl;
+        cout << "=====================DATA KARYAWAN====================" << endl;
         for (int i = 0; i < jumlah; i++)
         {
-            cout << "Nama :" << nama[i] << endl;
+            cout << "Nama          :" << nama[i] << endl;
             cout << "Jenis Kelamin : " << ((jenis_kelamin[i]=='l')? "Laki - Laki" : "Perempuan") << endl;
-            cout << "Umut : " << umur[i] << endl;
-            cout << "Agama : " << agama[i] << endl;
-            cout << "Alamat : " << alamat[i] << endl;
-            cout << "role : " << role[i] << endl;
+            cout << "Umut          : " << umur[i] << endl;
+            cout << "Agama         : " << agama[i] << endl;
+            cout << "Alamat        : " << alamat[i] << endl;
+            cout << "Telepon       : " << tlp[i] << endl;
+            cout << "role          : " << role[i] << endl;
             cout << " =====================================================" << endl;
         }
         goto menu;
         break;
     case 3:
-            cout << "================Kalkulator Gaji================" << endl;
+            cout << "====================Kalkulator Gaji===================" << endl;
             cout << "Masukkan Kategori Karyawan" << endl;
             cout << "(1.Supir travel , 2.Supir Travel , 3.Admin ) : " ;
             cin >> gol;
