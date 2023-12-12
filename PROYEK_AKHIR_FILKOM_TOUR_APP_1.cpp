@@ -38,16 +38,16 @@ int main(){
     string nama[100],alamat[100],agama[100], role [100] , tlp [100];
     int umur[100] ;
     menu:
-    cout << " =====================================================" << endl;
+    cout << "=====================================================" << endl;
     cout << "                    FILKOM TOUR APP                   " << endl;
-    cout << " =====================================================" << endl;
-    cout << " Silahkan Pilih Menu di Bawah" << endl;
-    cout << " 1. Input Data Karyawan" << endl;
-    cout << " 2. Data Karyawan" << endl;
-    cout << " 3. Kalkulator Gaji" << endl ;
-    cout << " 4. Keluar" << endl;
-    cout << " =====================================================" << endl;
-    cout << " Masukkan Pilihan Menu : " ;
+    cout << "=====================================================" << endl;
+    cout << "Silahkan Pilih Menu di Bawah" << endl;
+    cout << "1. Input Data Karyawan" << endl;
+    cout << "2. Data Karyawan" << endl;
+    cout << "3. Kalkulator Gaji" << endl ;
+    cout << "4. Keluar" << endl;
+    cout << "=====================================================" << endl;
+    cout << "Masukkan Pilihan Menu : " ;
     cin >> pilih ;
     switch (pilih)
     {
@@ -57,8 +57,8 @@ int main(){
         cin.ignore();
         for (int i = 0; i < jumlah; i++)
         {
-            cout << " ====================Karyawan ["<< (i+1) <<"]====================" << endl;
-            cout << "Nama :";
+            cout << "====================Karyawan ["<< (i+1) <<"]====================" << endl;
+            cout << "Nama : ";
             getline(cin,nama[i]);
             cout << "Jenis Kelamin (l/p) : "; 
             cin >> jenis_kelamin[i];
@@ -71,9 +71,9 @@ int main(){
             getline(cin,alamat[i]);
             cout << "No Telepon : " ;
             getline(cin,tlp[i]);
-            cout << "Kategori Karyawan : " ;
+            cout << "Kategori Karyawan (Supir travel , Supir Travel , Admin ) : " ;
             getline(cin,role[i]);
-            cout << " =====================================================" << endl; 
+            cout << "=====================================================" << endl; 
         }
         goto menu;
         break;
@@ -81,14 +81,14 @@ int main(){
         cout << "=====================DATA KARYAWAN====================" << endl;
         for (int i = 0; i < jumlah; i++)
         {
-            cout << "Nama          :" << nama[i] << endl;
+            cout << "Nama          : " << nama[i] << endl;
             cout << "Jenis Kelamin : " << ((jenis_kelamin[i]=='l')? "Laki - Laki" : "Perempuan") << endl;
             cout << "Umut          : " << umur[i] << endl;
             cout << "Agama         : " << agama[i] << endl;
             cout << "Alamat        : " << alamat[i] << endl;
             cout << "Telepon       : " << tlp[i] << endl;
             cout << "role          : " << role[i] << endl;
-            cout << " =====================================================" << endl;
+            cout << "=====================================================" << endl;
         }
         goto menu;
         break;
@@ -99,7 +99,7 @@ int main(){
             cin >> gol;
             cout << "Masukkan Jam Lembur : " ;
             cin >> lembur ;
-            cout << " =====================================================" << endl;
+            cout << "=====================================================" << endl;
             cout << "Gaji Bersih Karyawan Adalah : Rp." << fixed << setprecision(0) << gaji(gol,lembur) << endl;
             goto menu;
         break;
